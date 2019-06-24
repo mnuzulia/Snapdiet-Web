@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snapdiet ー Calorie No More!</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/libs/animate.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto:400,500,700,900|Ubuntu:300,400,500,700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navbar -->
+            <nav id="navbar-snapdiet" class="navbar navbar-expand-md navbar-dark bg-nav fixed-top">
+                <a href="#home" class="logo-link"><img class="style-logo" id="logo" src="img/logonav.png"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive">
+                    <span id="toggler" class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a id="home-link" class="nav-link style-nav" href="#home">HOME</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a id="about-link" class="nav-link style-nav" href="#about">ABOUT</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="why-link" class="nav-link style-nav" href="#whysnapdiet">WHY</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="feature-link" class="nav-link style-nav" href="#feature">FEATURES</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="feature-link" class="nav-link style-nav" href="#howitworks">HOW</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-item ">
+                            <a id="review-link" class="nav-link style-nav" href="#reviews">REVIEWS</a>
+                            <div class="underline"></div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+
+    <!-- Header -->
+    <section class="container-header" id="home">
+        <div class="container-fluid">
+            <div class="row padding">
+                <div class="col-md-6">
+                    <img class="header-img wow fadeInRight faster" data-wow-delay="0.5s" src="img/imgheader.png" alt="">
+                </div>
+                <div class="col-md-6 wow animated fadeInUp  faster" data-wow-delay="1s">
+                    <img class="content-logo" src="img/logo.png" alt="">
+                    <h1 class="header-content-tagline">Calorie no more</h1>
+                    <h4 class="header-content-text"> Take control of your goals. Track calories </br> and add it to
+                        journal.</h4>
+                    <!-- <h4 class="header-content-text"> Eat Better. Lose Weight. Get Healthy. </h4> -->
+                    <button class="btn-start">Start Using NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Header -->
+
+    <!-- Section About -->
+    <section class="container-fluid section-about" id="about">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="about-title wow fadeInLeft" data-wow-delay="1s">
+                    <div class="border-white"></div>
+                    <h1 class="about-content-title">Lose Weight with <span class="content-title-green"> Snapdiet</span>
+                        for FREE
+                    </h1>
+                    <h4 class="content-text">Study after study has confirmed the benefits of keeping track of the food
+                        you eat.
+                        It's simple - the more consistently you track your food intake, the more likely you are to lose
+                        weight.
+                    </h4>
+                    <h4 class="content-text">Snapdiet focus on making sure you can log your meals as quickly and easily
+                        as
+                        possible. Losing weight isn't easy, is it? But with Snapdiet, you'll get the tools you need
+                        to successfully take weight off and keep it off. </h4>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about-img wow fadeInRight" data-wow-delay="0.5s">
+                    <img class="img-bg" src="img/page_splash.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div>
+            <img class="asset-bg wow fadeIn slow" data-wow-delay="2s" src="img/asset1.png" alt="">
+        </div>
+    </section>
+    <!-- End Section About -->
+
+    <!-- Section Why Snapdiet -->
+    <section class="section-whysnapdiet" id="whysnapdiet">
+        <div class="whysnapdiet-title">
+            <h1 class="why-content-title">Why Snap</h1>
+            <h1 class="content-title-green1">diet </h1>
+            <h1 class="why-content-title"> ?</h1>
+            <div class="border-oren"></div>
+        </div>
+        <div class="container">
+            <div class="row padding">
+                <div class="col-md-4 why-content wow fadeInDown" data-wow-delay="0.5s">
+                    <div class="wrapper-circle">
+                        <div class="circle-inner">
+                            <i class="fas fa-check style-icon"></i>
+                        </div>
+                    </div>
+                    <div class="wrapper-text">
+                        <h4>Easiest</h4>
+                        <h5>Easy to use. A simple <br>way to plan your diet.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 why-content wow fadeInDown slow" data-wow-delay="1s">
+                    <div class="wrapper-circle">
+                        <div class="circle-inner">
+                            <i class="fas fa-dollar-sign style-icon"></i>
+                        </div>
+                    </div>
+                    <div class="wrapper-text">
+                        <h4>Free</h4>
+                        <h5>100% free, nothing<br> to pay.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 why-content wow fadeInDown slower" data-wow-delay="1.5s">
+                    <div class="wrapper-circle">
+                        <div class="circle-inner">
+                            <i class="fas fa-expand style-icon"></i>
+                        </div>
+                    </div>
+                    <div class="wrapper-text">
+                        <h4>Technology</h4>
+                        <h5>New ways to control<br>diet.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Why Snapdiet -->
+
+    <!-- Section Our Feature -->
+    <section class="section-feature" id="feature">
+        <div class="feature-title">
+            <div class="border-white"></div>
+            <h1 class="feature-content-title">Our </h1>
+            <h1 class="content-title-green"> Features</h1>
+
+        </div>
+        <div class="container">
+            <div class="row padding">
+                <div class="col-md-3 feature-content-left wow fadeInLeft" data-wow-delay="0.5s">
+                    <div class="feature-content-detail">
+                        <i class="fas fa-calculator fa-2x"></i>
+                        <h5>Calculate BMI</h5>
+                        <p>Discover your weight type</p>
+                        <br>
+                    </div>
+                    <div class="feature-content-detail">
+                        <i class="fas fa-expand fa-2x"></i>
+                        <h5>Calorie Finder</h5>
+                        <p>Scan meals to find out the calorie </p>
+                        <br>
+                    </div>
+                    <div class="feature-content-detail">
+                        <i class="fas fa-calendar-plus fa-2x"></i>
+                        <h5>Add to Journal</h5>
+                        <p>Keeping a calourie to helps you understand your habits</p>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <img class=" feature-img" src="img/feature_img.png" alt="">
+                </div>
+                <div class="col-md-3 feature-content-right wow fadeInRight" data-wow-delay="0.5s">
+                    <div class="feature-content-details">
+                        <i class="fas fa-calendar-alt fa-2x"></i>
+                        <h5>Calendar Journal</h5>
+                        <p>Track what you eat to see your progress and achieve your goals</p>
+                    </div>
+                    <div class="feature-content-details">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                        <h5>Graphic Calorie</h5>
+                        <p> Chart your progress over time and see your results</p>
+                    </div>
+                    <div class="feature-content-details">
+                        <i class="fas fa-lightbulb fa-2x"></i>
+                        <h5>Tips</h5>
+                        <p>Quick and easy reads to empower you on your diet journey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Our Feature -->
+
+    <!-- Section How it Works -->
+    <section class="section-howit-works" id="howitworks">
+        <div class="howit-title">
+            <h1 class="howit-content-title">How it <h1 class="content-title-green1 padding-left-work"> Work?</h1>
+            </h1>
+            <div class="border-orens"></div>
+        </div>
+        <div class="howit-title-tagline wow fadeIn" data-wow-delay="0.5s">
+            <h3>3 WAYS TO USE : </h3>
+        </div>
+
+        <div class="container">
+            <div class="row padding space-bottom">
+                <div class="col-5  howit-content-img-left wow rotateInDownLeft" data-wow-delay="0.5s">
+                    <img src="img/calculate_bmi.png" alt="">
+                </div>
+                <div class="col-7  howit-content-text wow fadeInRight slower" data-wow-delay="1s">
+                    <div class="howit-icon"><i class="fas fa-caret-left fa-4x"></i></div>
+                    <div class="howit-text-detail">
+                        <h2>Calculate your BMI</h2>
+                        <h5>Find out your current
+                            mass index</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding space-bottom">
+                <div class="col-7  howit-content-text wow fadeInLeft slower" data-wow-delay="1s">
+                    <div class="howit-text-detail-left text-right">
+                        <h2>Capture your Food</h2>
+                        <h5>Use your camera to find out </br>your food calories</h5>
+                    </div>
+                    <div class="howit-icon"><i class="fas fa-caret-right fa-4x"></i></div>
+                </div>
+                <div class="col-5  howit-content-img-right wow rotateInDownRight" data-wow-delay="0.5s">
+                    <img src="img/calorie _finder.png" alt="">
+                </div>
+            </div>
+            <div class="row padding">
+                <div class="col-5  howit-content-img-left wow rotateInDownLeft" data-wow-delay="0.5s">
+                    <img src="img/home.png" alt="">
+                </div>
+                <div class="col-7  howit-content-text wow fadeInRight slower" data-wow-delay="1s">
+                    <div class="howit-icon"><i class="fas fa-caret-left fa-4x"></i></div>
+                    <div class="howit-text-detail">
+                        <h2>Add To Journal</h2>
+                        <h5>Save your food calories
+                            information </br> into a journal
+                            to control your calories</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section How it works -->
+
+    <!-- Section Review-->
+    <section class="section-reviews" id="reviews">
+        <div class="reviews-title">
+            <div class="border-white"></div>
+            <h1 class="reviews-title-content">What Our Customer </h1>
+            <h1 class="content-title-green">are Saying?</h1>
+
+        </div>
+        <div class="container">
+            <div class="row padding">
+                <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
+                    <div class="review-content">
+                        <h5>Highly recommended!</h5>
+                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
+                        <p class="review-name">- Siapa ya -</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    </div>
+                </div>
+                <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
+                    <div class="review-content">
+                        <h5>Finally! Great app!</h5>
+                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
+                        <p class="review-name">- Siapa ya -</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    </div>
+                </div>
+                <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
+                    <div class="review-content">
+                        <h5>Highly recommended!</h5>
+                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
+                        <p class="review-name">- Siapa ya -</p>
+                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section Review- -->
+
+    <!-- Section GetApp -->
+    <section class="section section-get-apps" id="getapps">
+        <div class="container-fluid">
+            <div class="row padding ">
+                <div class="col-md-6 wow tada" data-wow-delay="1s">
+                    <div class="get-apps-title">
+                        <img class="get-apps-img" src="img/logosnapdiet.png" alt="">
+                    </div>
+                    <div>
+                        <div class="get-apps-border"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 get-apps-content-text">
+                    <div class="wow fadeIn faster" data-wow-delay="0.5s">
+                        <h2>Are you ready to make a change?</h2>
+                        <p> Get the app today and achieve your diet goals.</p>
+                    </div>
+                    <div class="wow fadeInUpBig slower" data-wow-delay="0.7s">
+                        <button class="btn-get-apps">Download For Free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section GetApp -->
+
+    <!-- Back to Top  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="scroll-top">
+                <div class="scroll icon"><i class="fas fa-arrow-up"></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Back to Top -->
+
+    <!-- Footer -->
+    <section class="section container-footer">
+        <div class="footer-content">
+            <h5>©2019 Snapdiet. All Right Reserved</h5>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script>
+        AOS.init();
+    </script> -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
