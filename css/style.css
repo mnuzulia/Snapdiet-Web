@@ -152,6 +152,56 @@ table {
     background-color: #EFEFEF;
 }
 
+
+.snapdiet-button-open {
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -12px;
+}
+
+.snapdiet-button-open,
+.snapdiet-button-open::before,
+.snapdiet-button-open::after {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.snapdiet-button-open::before,
+.snapdiet-button-open::after {
+    left: 0;
+    content: "";
+}
+
+.snapdiet-button-open::before {
+    top: 6px;
+}
+
+.snapdiet-button-open::after {
+    bottom: 6px;
+}
+
+.snapdiet-button-close {
+    background: transparent;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.snapdiet-button-close::before {
+    -webkit-transform: translateY(-6px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg);
+}
+
+.snapdiet-button-close::after {
+    -webkit-transform: translateY(6px) rotate(-45deg);
+    transform: translateY(6px) rotate(-45deg);
+}
+
 .navbar-nav a {
     position: relative;
 }
@@ -305,11 +355,22 @@ table {
     width: 10em;
     height: 2em;
     cursor: pointer;
+    outline: none;
+}
+
+.btn-download {
+
+    color: #EFEFEF;
 }
 
 .btn-start:hover {
     background-color: #F29D4C;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-download:hover {
+    color: #EFEFEF !important;
+    text-decoration: none !important;
 }
 
 .style-nav {
@@ -319,9 +380,16 @@ table {
 /* End Header */
 
 /* Section About */
+.brush-oren {
+    background-image: url("../img/brush_oren2.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 6vh;
+}
+
 .section-about {
-    background-image: url("img/bg_oren.png");
-    background-color: #EFEFEF;
+    /* background-image: url("../img/bg_oren.png"); */
+    background-color: #FFAA64;
     height: 130vh;
     width: 100%;
     padding-top: 10rem;
@@ -375,6 +443,7 @@ table {
 }
 
 .asset-bg {
+    display: none;
     position: absolute;
     z-index: 1;
     width: 35%;
@@ -385,6 +454,13 @@ table {
 /* End Section About */
 
 /* Section Why */
+.brush-putih {
+    background-image: url("../img/brush_putih.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 6vh;
+}
+
 .section-whysnapdiet {
     background-color: #EFEFEF;
     height: 100vh;
@@ -527,8 +603,8 @@ table {
 
 /* Section Our Features */
 .section-feature {
-    background-image: url("img/bg_oren.png");
-    background-color: #EFEFEF;
+    /* background-image: url("../img/bg_oren.png"); */
+    background-color: #FFAA64;
     height: 130vh;
     width: 100%;
     padding-top: 6rem;
@@ -738,8 +814,8 @@ table {
 
 /* Section Review */
 .section-reviews {
-    background-image: url("img/bg_oren.png");
-    background-color: #EFEFEF;
+    /* background-image: url("../img/bg_oren.png"); */
+    background-color: #FFAA64;
     height: 130vh;
     width: 100%;
     padding-top: 10rem;
@@ -770,6 +846,7 @@ table {
 }
 
 .review-content {
+    height: 40vh;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 2rem;
@@ -876,6 +953,7 @@ table {
     height: 2em;
     margin: 0 auto;
     cursor: pointer;
+    outline: none;
 }
 
 .btn-get-apps:hover {
@@ -962,7 +1040,7 @@ table {
 
 /* Responsive */
 /* Iphone 5 */
-@media (max-width: 350px) {
+@media only screen and (min-width: 320px) and (max-width:350px) {
 
     /* .navbar-toogler {
         font-size: 1rem !important;
@@ -1025,8 +1103,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 155vh;
-        padding-top: 10rem;
+        height: 120vh;
+        padding-top: 6.5rem;
         padding-left: 0 !important;
     }
 
@@ -1035,8 +1113,8 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
-
     }
 
     .about-content-title {
@@ -1059,6 +1137,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 83rem;
@@ -1084,6 +1163,7 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .8rem;
         margin-left: -0.21rem;
@@ -1125,7 +1205,7 @@ table {
 
     .style-icon {
         font-size: 1.2em;
-        margin-top: .5rem;
+        margin-top: .6rem;
 
     }
 
@@ -1172,6 +1252,10 @@ table {
         margin-left: .2rem;
     }
 
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .5rem auto;
+    }
+
     .section-feature {
         height: 155vh;
         padding-top: 4rem;
@@ -1183,7 +1267,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -1287,7 +1371,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -1357,34 +1441,14 @@ table {
         padding-bottom: 5rem;
     }
 
-    /* Belom diedit*/
-
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
     .section-reviews {
         width: 100%;
         height: 155vh;
-        padding-top: 4rem;
+        padding-top: 2.5rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -1405,7 +1469,7 @@ table {
 
     .review-content {
         width: 80%;
-        height: 35vh;
+        height: 42vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -1416,7 +1480,7 @@ table {
 
     .review-content h5 {
         font-size: .8em;
-        margin-bottom: 1rem;
+        margin-bottom: .6rem;
     }
 
     .review-content i {
@@ -1426,6 +1490,7 @@ table {
 
     .review-content p {
         font-size: .8em;
+        margin-bottom: .4rem;
     }
 
     .review-name {
@@ -1534,6 +1599,8 @@ table {
     }
 
     button.navbar-toggler.navbar-toggler-right {
+        width: 15%;
+        height: 6vh;
         position: absolute !important;
         right: 1.5rem !important;
         top: 1rem !important;
@@ -1542,13 +1609,16 @@ table {
     }
 
     .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
         color: black !important;
     }
 
 }
 
 /*Samsung S5 and Iphone 6/7/8  */
-@media (min-width: 351px) and (max-width: 376px) {
+@media (max-width: 375px) {
     .style-logo {
         width: 50% !important;
         padding-top: -1rem;
@@ -1557,6 +1627,8 @@ table {
     }
 
     button.navbar-toggler.navbar-toggler-right {
+        width: 15%;
+        height: 6vh;
         position: absolute !important;
         right: 1.5rem !important;
         top: 1rem !important;
@@ -1565,6 +1637,9 @@ table {
     }
 
     .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
         color: black !important;
     }
 
@@ -1622,8 +1697,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 133vh;
-        padding-top: 10rem;
+        height: 110vh;
+        padding-top: 6rem;
         padding-left: 0 !important;
     }
 
@@ -1632,6 +1707,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -1656,6 +1732,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 88rem;
@@ -1665,7 +1742,7 @@ table {
     .section-whysnapdiet {
         height: 100vh;
         width: 100%;
-        padding-top: 5rem;
+        padding-top: 3rem;
     }
 
     .whysnapdiet-title {
@@ -1681,8 +1758,9 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
-        margin-bottom: .8rem;
+        margin-bottom: .78rem;
         margin-left: -0.21rem;
     }
 
@@ -1703,8 +1781,8 @@ table {
         display: block;
         border-radius: 100px;
         border: solid 3px #8F8B8B;
-        width: 15%;
-        height: 8vh;
+        width: 14%;
+        height: 7.5vh;
         padding: 0rem;
         margin: 0 auto;
         transition: 0.7s;
@@ -1722,7 +1800,7 @@ table {
 
     .style-icon {
         font-size: 1.2em;
-        margin-top: .8rem;
+        margin-top: .65rem;
 
     }
 
@@ -1759,9 +1837,9 @@ table {
 
     .why-content:hover .wrapper-circle>.circle-inner {
         width: 85%;
-        height: 6.3vh;
+        height: 5.8vh;
         border-radius: 50px;
-        text-align: center;
+        padding: 0rem;
         background-color: #F29D4C;
         transition: 0.7s;
         color: #EFEFEF;
@@ -1769,7 +1847,12 @@ table {
         margin-left: .2rem;
     }
 
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .5rem auto;
+    }
+
     .section-feature {
+        width: 100%;
         height: 133vh;
         padding-top: 4rem;
 
@@ -1780,7 +1863,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -1870,9 +1953,9 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
-        margin-bottom: .7rem;
+        margin-bottom: .75rem;
         margin-left: -.2rem;
     }
 
@@ -1940,34 +2023,14 @@ table {
         padding-bottom: 5rem;
     }
 
-    /* Belom diedit*/
-
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
     .section-reviews {
         width: 100%;
-        height: 133vh;
-        padding-top: 6rem;
+        height: 150vh;
+        padding-top: 2.5rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -1988,7 +2051,7 @@ table {
 
     .review-content {
         width: 80%;
-        height: 30vh;
+        height: 40vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -1999,7 +2062,7 @@ table {
 
     .review-content h5 {
         font-size: .8em;
-        margin-bottom: 1rem;
+        margin-bottom: .6rem;
     }
 
     .review-content i {
@@ -2009,6 +2072,7 @@ table {
 
     .review-content p {
         font-size: .8em;
+        margin-bottom: .4rem;
     }
 
     .review-name {
@@ -2112,7 +2176,7 @@ table {
 
 }
 
-/*Iphone 6/7/8 Plus */
+/*Iphone 6/7/8 Plus and Pixel 2L*/
 @media (min-width: 377px) and (max-width: 415px) {
     .style-logo {
         width: 50% !important;
@@ -2122,14 +2186,19 @@ table {
     }
 
     button.navbar-toggler.navbar-toggler-right {
+        width: 14%;
+        height: 5vh;
         position: absolute !important;
         right: 1.5rem !important;
-        top: 1rem !important;
+        top: 1.2rem !important;
         background-color: #9CA747;
 
     }
 
     .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
         color: black !important;
     }
 
@@ -2187,8 +2256,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 120vh;
-        padding-top: 10rem;
+        height: 100vh;
+        padding-top: 7rem;
         padding-left: 0 !important;
     }
 
@@ -2197,6 +2266,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -2222,6 +2292,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 92rem;
@@ -2247,9 +2318,10 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
-        margin-bottom: .6rem;
-        margin-left: -0.21rem;
+        margin-bottom: .75rem;
+        margin-left: -0.3rem;
     }
 
 
@@ -2269,8 +2341,8 @@ table {
         display: block;
         border-radius: 100px;
         border: solid 3px #8F8B8B;
-        width: 15%;
-        height: 8vh;
+        width: 13.9%;
+        height: 7vh;
         padding: 0rem;
         margin: 0 auto;
         transition: 0.7s;
@@ -2288,7 +2360,7 @@ table {
 
     .style-icon {
         font-size: 1.2em;
-        margin-top: .9rem;
+        margin-top: .7rem;
 
     }
 
@@ -2324,8 +2396,8 @@ table {
 
 
     .why-content:hover .wrapper-circle>.circle-inner {
-        width: 85%;
-        height: 6.5vh;
+        width: 85.5%;
+        height: 5.5vh;
         border-radius: 50px;
         text-align: center;
         background-color: #F29D4C;
@@ -2333,6 +2405,10 @@ table {
         color: #EFEFEF;
         margin-top: .15rem;
         margin-left: .25rem;
+    }
+
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .7rem auto;
     }
 
     .section-feature {
@@ -2346,7 +2422,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -2443,7 +2519,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -2513,35 +2589,14 @@ table {
         padding-bottom: 5rem;
     }
 
-    /* Belom diedit*/
-
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
-
     .section-reviews {
         width: 100%;
         height: 120vh;
-        padding-top: 6rem;
+        padding-top: 4rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -2562,7 +2617,7 @@ table {
 
     .review-content {
         width: 80%;
-        height: 25vh;
+        height: 30vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -2583,6 +2638,7 @@ table {
 
     .review-content p {
         font-size: .8em;
+        margin-bottom: .4rem;
     }
 
     .review-name {
@@ -2653,7 +2709,7 @@ table {
 
     .scroll {
         width: 4%;
-        height: 10vh;
+        height: 8vh;
         position: absolute;
         right: -50px;
         bottom: -20px;
@@ -2695,6 +2751,8 @@ table {
     }
 
     button.navbar-toggler.navbar-toggler-right {
+        width: 14%;
+        height: 5vh;
         position: absolute !important;
         right: 1.5rem !important;
         top: 1rem !important;
@@ -2703,6 +2761,9 @@ table {
     }
 
     .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
         color: black !important;
     }
 
@@ -2760,8 +2821,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 105vh;
-        padding-top: 10rem;
+        height: 85vh;
+        padding-top: 7rem;
         padding-left: 0 !important;
     }
 
@@ -2770,6 +2831,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -2795,6 +2857,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 90rem;
@@ -2820,9 +2883,10 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
-        margin-bottom: .6rem;
-        margin-left: -0.21rem;
+        margin-bottom: .65rem;
+        margin-left: -0.3rem;
     }
 
 
@@ -2908,6 +2972,10 @@ table {
         margin-left: .25rem;
     }
 
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .8rem auto;
+    }
+
     .section-feature {
         height: 105vh;
         padding-top: 4rem;
@@ -2919,7 +2987,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -3016,7 +3084,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -3088,33 +3156,14 @@ table {
         padding-bottom: 5rem;
     }
 
-    /* Belom diedit*/
-
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
     .section-reviews {
         width: 100%;
         height: 105vh;
-        padding-top: 6rem;
+        padding-top: 2.5rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -3135,7 +3184,7 @@ table {
 
     .review-content {
         width: 80%;
-        height: 23vh;
+        height: 28vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -3156,6 +3205,7 @@ table {
 
     .review-content p {
         font-size: .8em;
+        margin-bottom: .5rem;
     }
 
     .review-name {
@@ -3269,6 +3319,8 @@ table {
     }
 
     button.navbar-toggler.navbar-toggler-right {
+        width: 15%;
+        height: 5vh;
         position: absolute !important;
         right: 1.5rem !important;
         top: 1rem !important;
@@ -3277,8 +3329,12 @@ table {
     }
 
     .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
         color: black !important;
     }
+
 
     .container-header {
         width: 100%;
@@ -3334,8 +3390,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 105vh;
-        padding-top: 10rem;
+        height: 85vh;
+        padding-top: 6rem;
         padding-left: 0 !important;
     }
 
@@ -3344,6 +3400,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -3369,6 +3426,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 90rem;
@@ -3394,9 +3452,10 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
-        margin-bottom: .8rem;
-        margin-left: -0.21rem;
+        margin-bottom: .75rem;
+        margin-left: -0.3rem;
     }
 
 
@@ -3416,7 +3475,7 @@ table {
         display: block;
         border-radius: 100px;
         border: solid 3px #8F8B8B;
-        width: 15%;
+        width: 14.5%;
         height: 6vh;
         padding: 0rem;
         margin: 0 auto;
@@ -3435,7 +3494,7 @@ table {
 
     .style-icon {
         font-size: 1.2em;
-        margin-top: .6rem;
+        margin-top: .8rem;
 
     }
 
@@ -3482,6 +3541,10 @@ table {
         margin-left: .2rem;
     }
 
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .5rem auto;
+    }
+
     .section-feature {
         height: 105vh;
         padding-top: 4rem;
@@ -3493,7 +3556,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -3590,7 +3653,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -3660,34 +3723,14 @@ table {
         padding-bottom: 6rem;
     }
 
-    /* Belom diedit*/
-
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
     .section-reviews {
         width: 100%;
         height: 105vh;
-        padding-top: 6rem;
+        padding-top: 2rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -3708,7 +3751,7 @@ table {
 
     .review-content {
         width: 80%;
-        height: 23vh;
+        height: 28vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -3729,6 +3772,7 @@ table {
 
     .review-content p {
         font-size: .8em;
+        margin-bottom: .5rem;
     }
 
     .review-name {
@@ -3882,8 +3926,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 85vh;
-        padding-top: 15rem;
+        height: 65vh;
+        padding-top: 9rem;
         padding-left: 0 !important;
     }
 
@@ -3892,6 +3936,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -3917,6 +3962,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 40%;
         top: 78rem;
@@ -3924,9 +3970,9 @@ table {
     }
 
     .section-whysnapdiet {
-        height: 50vh;
+        height: 42vh;
         width: 100%;
-        padding-top: 6.5rem;
+        padding-top: 3rem;
     }
 
     .whysnapdiet-title {
@@ -3942,6 +3988,7 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 5vh;
         margin-bottom: .8rem;
         margin-left: -0.21rem;
@@ -4031,8 +4078,8 @@ table {
     }
 
     .section-feature {
-        height: 85vh;
-        padding-top: 10rem;
+        height: 70vh;
+        padding-top: 4.5rem;
 
     }
 
@@ -4041,7 +4088,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -4140,7 +4187,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -4213,32 +4260,14 @@ table {
         font-size: 1.3em;
     }
 
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
     .section-reviews {
         width: 100%;
-        height: 85vh;
-        padding-top: 15rem;
+        height: 50vh;
+        padding-top: 2rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -4259,7 +4288,7 @@ table {
 
     .review-content {
         width: 100%;
-        height: 20vh;
+        height: 28vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -4469,8 +4498,8 @@ table {
 
     .section-about {
         width: 100%;
-        height: 64vh;
-        padding-top: 15rem;
+        height: 54vh;
+        padding-top: 6rem;
         padding-left: 0 !important;
     }
 
@@ -4479,6 +4508,7 @@ table {
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 6vh;
 
     }
@@ -4504,6 +4534,7 @@ table {
     }
 
     .asset-bg {
+        display: none;
         position: absolute;
         width: 35%;
         top: 80rem;
@@ -4513,7 +4544,7 @@ table {
     .section-whysnapdiet {
         height: 40vh;
         width: 100%;
-        padding-top: 6rem;
+        padding-top: 4rem;
     }
 
     .whysnapdiet-title {
@@ -4529,6 +4560,7 @@ table {
     }
 
     .border-oren {
+        border-bottom: 2px solid #FFAA64;
         width: 5vh;
         margin-bottom: .8rem;
         margin-left: -0.21rem;
@@ -4618,8 +4650,8 @@ table {
     }
 
     .section-feature {
-        height: 64vh;
-        padding-top: 8rem;
+        height: 55vh;
+        padding-top: 3rem;
 
     }
 
@@ -4628,7 +4660,7 @@ table {
     }
 
     .border-white {
-
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
 
     }
@@ -4727,7 +4759,7 @@ table {
     }
 
     .border-orens {
-        border-bottom: 3px solid #FFAA64;
+        border-bottom: 2px solid #FFAA64;
         width: 2em;
         margin-bottom: .7rem;
         margin-left: -.2rem;
@@ -4806,32 +4838,14 @@ table {
         font-size: 1.3em;
     }
 
-    /* .howit-content-text-right {
-        color: #D67030;
-        padding-top: 7rem;
-        font-family: 'Ubuntu', sans-serif;
-        text-align: right;
-
-    }
-
-    .howit-content-text-right h2 {
-        color: #D67030;
-    }
-
-    .howit-content-text-right h5 {
-        color: #434242;
-        font-weight: 300;
-        line-height: 2rem;
-    } */
-
-
     .section-reviews {
         width: 100%;
-        height: 64vh;
-        padding-top: 15rem;
+        height: 54vh;
+        padding-top: 4rem;
     }
 
     .border-white {
+        border-bottom: 2px solid #ffffff;
         width: 5vh;
     }
 
@@ -4852,7 +4866,7 @@ table {
 
     .review-content {
         width: 100%;
-        height: 20vh;
+        height: 30vh;
         padding: 1rem;
         margin: 0 auto;
     }
@@ -5011,6 +5025,563 @@ table {
 
     .navbar .navbar-toggler .navbar-toggler-icon {
         color: black !important;
+    }
+
+}
+
+/* Samsung J7 dkk*/
+@media only screen and (min-width:424px) and (max-width:451px) {
+    .style-logo {
+        width: 50% !important;
+        padding-top: -1rem;
+        padding-left: 1rem;
+        cursor: pointer;
+    }
+
+    button.navbar-toggler.navbar-toggler-right {
+        width: 15%;
+        height: 7vh;
+        position: absolute !important;
+        right: 1.5rem !important;
+        top: 1rem !important;
+        background-color: #9CA747;
+
+    }
+
+    .navbar .navbar-toggler .navbar-toggler-icon {
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
+        color: black !important;
+    }
+
+    .container-header {
+        width: 100%;
+        height: 110vh;
+        background-color: #EFEFEF;
+        padding-top: 10rem;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .navbar-collapse ul li.active-link .underline {
+        width: 30%;
+        background-color: #D67030;
+    }
+
+    .navbar-collapse ul li:hover .underline {
+        background-color: #D67030;
+        width: 30%;
+    }
+
+    .header-img {
+        width: 60%;
+        margin: 0 auto;
+        padding-left: 0rem;
+        display: block;
+    }
+
+    .content-logo {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 3rem;
+        margin-bottom: .5rem;
+    }
+
+    .header-content-tagline {
+        font-size: 1.2em;
+        text-align: center;
+        padding-bottom: .8rem;
+    }
+
+    .header-content-text {
+        text-align: center;
+        line-height: 2rem;
+        font-size: .8em;
+        padding-bottom: .5rem;
+    }
+
+    .btn-start {
+        display: block;
+        margin: 0 auto;
+        font-size: .8em;
+    }
+
+    .section-about {
+        width: 100%;
+        height: 120vh;
+        padding-top: 8rem;
+        padding-left: 0 !important;
+    }
+
+    .about-title {
+        margin-top: -3rem;
+    }
+
+    .border-white {
+        border-bottom: 2px solid #ffffff;
+        width: 6vh;
+
+    }
+
+    .about-content-title {
+        font-size: .8em;
+    }
+
+    .content-text {
+        margin-left: 2.9rem;
+        margin-right: 2.5rem;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        font-size: .85em;
+        text-align: justify;
+    }
+
+    .img-bg {
+        width: 45%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .asset-bg {
+        display: none;
+        position: absolute;
+        width: 40%;
+        top: 88rem;
+        left: 3rem;
+    }
+
+    .section-whysnapdiet {
+        height: 100vh;
+        width: 100%;
+        padding-top: 3rem;
+    }
+
+    .whysnapdiet-title {
+        margin-bottom: 2rem;
+    }
+
+    .why-content-title {
+        font-size: 1em;
+    }
+
+    .content-title-green1 {
+        font-size: 1em;
+    }
+
+    .border-oren {
+        border-bottom: 2px solid #FFAA64;
+        width: 2em;
+        margin-bottom: .7rem;
+        margin-left: -0.21rem;
+    }
+
+
+    .whysnapdiet-content {
+        height: 30vh;
+        width: 30%;
+        padding: 0rem;
+        text-align: center;
+        color: #8F8B8B;
+        justify-content: center;
+        display: block;
+        margin-bottom: 3rem;
+
+    }
+
+    .wrapper-circle {
+        display: block;
+        border-radius: 100px;
+        border: solid 3px #8F8B8B;
+        width: 13%;
+        height: 9vh;
+        padding: 0rem;
+        margin: 0 auto;
+        transition: 0.7s;
+    }
+
+
+    .circle-inner {
+        width: 100%;
+        height: 9vh;
+        border-radius: 50px;
+        transition: 0.7s;
+        text-align: center;
+        color: #8F8B8B;
+    }
+
+    .style-icon {
+        font-size: 1.2em;
+        margin-top: .8rem;
+
+    }
+
+    .wrapper-text {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .wrapper-text h4 {
+        font-size: .8em;
+    }
+
+    .wrapper-text h5 {
+        font-size: .8em;
+
+    }
+
+    .why-content {
+        width: 100%;
+        height: 25vh;
+        /* background-color: #9CA747; */
+    }
+
+    .why-content:hover>.wrapper-text {
+        color: #D67030;
+    }
+
+    .why-content:hover>.wrapper-circle {
+        border: solid 3px #F29D4C;
+        transition: 0.7s;
+    }
+
+
+    .why-content:hover .wrapper-circle>.circle-inner {
+        width: 85%;
+        height: 7vh;
+        border-radius: 50px;
+        padding: 0rem;
+        background-color: #F29D4C;
+        transition: 0.7s;
+        color: #EFEFEF;
+        margin-top: .2rem;
+        margin-left: .2rem;
+    }
+
+    .why-content:hover .wrapper-circle .circle-inner>.style-icon {
+        margin: .5rem auto;
+    }
+
+    .section-feature {
+        height: 155vh;
+        padding-top: 3rem;
+
+    }
+
+    .feature-title {
+        margin-bottom: .5rem;
+    }
+
+    .border-white {
+        border-bottom: 2px solid #ffffff;
+        width: 5vh;
+
+    }
+
+    .feature-content-title {
+        margin-left: -.5rem;
+        font-size: 1em;
+    }
+
+    .content-title-green {
+        font-size: 1em;
+    }
+
+    .feature-img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    .feature-content-detail {
+        margin-bottom: -1rem;
+    }
+
+    .feature-content-left {
+        height: 50vh;
+        text-align: center;
+        padding-top: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    .feature-content-left .fas {
+        font-size: .8em;
+    }
+
+    .feature-content-left h5 {
+        margin-top: 0.5rem;
+        font-size: .8em;
+    }
+
+    .feature-content-left p {
+        margin-top: -0.5rem;
+        margin-bottom: .1rem;
+        font-size: .8em;
+    }
+
+    .feature-content-details {
+        margin-bottom: 1rem;
+    }
+
+    .feature-content-right {
+        height: 50vh;
+        text-align: center;
+        padding-top: 0rem;
+        margin-top: 1.5rem;
+    }
+
+    .feature-content-right .fas {
+        font-size: .8em;
+    }
+
+    .feature-content-right h5 {
+        margin-top: 0.5rem;
+        font-size: .8em;
+    }
+
+    .feature-content-right p {
+        margin-top: -0.5rem;
+        margin-bottom: .1rem;
+        font-size: .8em;
+    }
+
+    .section-howit-works {
+        background-color: #EFEFEF;
+        height: 140vh;
+        width: 100%;
+        padding-top: 3rem;
+    }
+
+    .howit-content-title {
+        font-size: 1em;
+
+    }
+
+    .content-title-green1 {
+        font-size: 1em;
+    }
+
+    .border-orens {
+        border-bottom: 2px solid #FFAA64;
+        width: 2em;
+        margin-bottom: .75rem;
+        margin-left: -.2rem;
+    }
+
+    .howit-title-tagline {
+
+        margin-top: -1rem;
+        margin-bottom: 5rem;
+    }
+
+    .howit-title-tagline h3 {
+        font-size: .85em;
+    }
+
+    .howit-icon {
+        display: none;
+        color: #9CA747;
+        padding-top: 0rem;
+        padding-right: .5rem;
+    }
+
+    .howit-text-detail {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+    }
+
+    .howit-icon .fa-caret-left {
+        font-size: 1em;
+    }
+
+
+    .howit-content-img-left img {
+        width: 55%;
+        margin-left: 1.5rem;
+        transform: rotate(-13deg);
+        margin-top: -2rem;
+
+    }
+
+    .howit-content-img-right img {
+        width: 55%;
+        margin-left: 0rem;
+        transform: rotate(13deg);
+        margin-top: -2rem;
+    }
+
+    .howit-content-text {
+        padding-top: 0rem;
+        margin-top: -.5rem;
+    }
+
+    .howit-content-text h2 {
+        font-size: .8em;
+        margin-top: .2rem;
+    }
+
+
+    .howit-content-text h5 {
+        line-height: 1.5rem;
+        font-size: .8em;
+    }
+
+    .space-bottom {
+        padding-bottom: 5rem;
+    }
+
+    .section-reviews {
+        width: 100%;
+        height: 155vh;
+        padding-top: 4rem;
+    }
+
+    .border-white {
+        border-bottom: 2px solid #ffffff;
+        width: 3.5vh;
+    }
+
+    .review-wrapper {
+        margin-bottom: 1.5rem;
+    }
+
+    .reviews-title-content {
+        margin-left: -0.5rem;
+        font-size: 1em;
+        margin-bottom: 2rem;
+    }
+
+    .content-title-green {
+        font-size: 1em;
+
+    }
+
+    .review-content {
+        width: 80%;
+        height: 40vh;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .review-content:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .review-content h5 {
+        font-size: .8em;
+        margin-bottom: 1rem;
+    }
+
+    .review-content i {
+        font-size: .8em;
+
+    }
+
+    .review-content p {
+        font-size: .8em;
+        margin-bottom: .5rem;
+    }
+
+    .review-name {
+        font-size: .8em;
+    }
+
+    .green {
+        height: 30vh;
+        background-color: green;
+    }
+
+    .section-get-apps {
+        height: 65vh;
+        width: 100%;
+        padding-top: 5rem;
+    }
+
+    .get-apps-img {
+        width: 50%;
+        height: 50%;
+        margin-bottom: .5rem;
+    }
+
+    .get-apps-border {
+        border-bottom: 5px solid #FFAA64;
+    }
+
+    .btn-get-apps {
+        font-size: 1em;
+        width: 10em;
+        height: 2em;
+        margin: 0 auto;
+    }
+
+
+    .get-apps-content-text {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .get-apps-content-text h2 {
+        font-size: 1em;
+    }
+
+    .get-apps-content-text p {
+        font-size: .8em;
+        margin-bottom: 2rem;
+    }
+
+    .container-footer {
+        height: 7vh;
+        background-color: #D67030;
+        padding: 1rem;
+    }
+
+    .footer-content h5 {
+        font-size: .8em;
+    }
+
+    .scroll-top {
+        display: none;
+        width: 100%;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 40px;
+        right: 80px;
+    }
+
+    .scroll {
+        width: 4%;
+        height: 9vh;
+        position: absolute;
+        right: -50px;
+        bottom: -20px;
+
+    }
+
+    .scroll:hover {
+        background: rgb(168, 180, 77);
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+
+    .scroll:hover .fas {
+        padding-top: -.9rem;
+    }
+
+    .scroll .fas {
+        font-size: 1.5em;
+        margin-top: -1rem;
+        margin-left: -.6rem;
+        transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
     }
 }
 

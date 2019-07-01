@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Snapdiet ー Calorie No More!</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/libs/animate.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -29,35 +28,41 @@
             <!-- Navbar -->
             <nav id="navbar-snapdiet" class="navbar navbar-expand-md navbar-dark bg-nav fixed-top">
                 <a href="#home" class="logo-link"><img class="style-logo" id="logo" src="img/logonav.png"></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive">
-                    <span id="toggler" class="navbar-toggler-icon"></span>
+                <button id="nav-toggler" class="navbar-toggler navbar-toggler-right" type="button"
+                    data-toggle="collapse" data-target="#navbarResponsive">
+                    <span class="snapdiet-button-open"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a id="home-link" class="nav-link style-nav" href="#home">HOME</a>
+                            <a id="home-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#home">HOME</a>
                             <div class="underline"></div>
                         </li>
                         <li class="nav-item">
-                            <a id="about-link" class="nav-link style-nav" href="#about">ABOUT</a>
+                            <a id="about-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#about">ABOUT</a>
                             <div class="underline"></div>
                         </li>
                         <li class="nav-item ">
-                            <a id="why-link" class="nav-link style-nav" href="#whysnapdiet">WHY</a>
+                            <a id="why-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#whysnapdiet">WHY</a>
                             <div class="underline"></div>
                         </li>
                         <li class="nav-item ">
-                            <a id="feature-link" class="nav-link style-nav" href="#feature">FEATURES</a>
+                            <a id="feature-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#feature">FEATURES</a>
                             <div class="underline"></div>
                         </li>
                         <li class="nav-item ">
-                            <a id="feature-link" class="nav-link style-nav" href="#howitworks">HOW</a>
+                            <a id="feature-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#howitworks">HOW</a>
                             <div class="underline"></div>
                         </li>
                         <li class="nav-item ">
-                            <a id="review-link" class="nav-link style-nav" href="#reviews">REVIEWS</a>
+                            <a id="review-link" class="nav-link style-nav" data-toggle="collapse" data-target=".in"
+                                href="#reviews">REVIEWS</a>
                             <div class="underline"></div>
                         </li>
                     </ul>
@@ -77,10 +82,12 @@
                 <div class="col-md-6 wow animated fadeInUp  faster" data-wow-delay="1s">
                     <img class="content-logo" src="img/logo.png" alt="">
                     <h1 class="header-content-tagline">Calorie no more</h1>
-                    <h4 class="header-content-text"> Take control of your goals. Track calories </br> and add it to
+                    <h4 class="header-content-text"> Take control of your goals, Track calories, </br> and Add it to
                         journal.</h4>
-                    <!-- <h4 class="header-content-text"> Eat Better. Lose Weight. Get Healthy. </h4> -->
-                    <button class="btn-start">Start Using NOW</button>
+                    <button class="btn-start" type="button"> <a href="/snapdiet-v1.0.1.apk" class="btn-download"
+                            download="snapdiet.apk">Start
+                            Using Now</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -89,6 +96,7 @@
     <!-- End Header -->
 
     <!-- Section About -->
+    <div class="brush-oren"></div>
     <section class="container-fluid section-about" id="about">
         <div class="row">
             <div class="col-md-7">
@@ -121,6 +129,7 @@
     <!-- End Section About -->
 
     <!-- Section Why Snapdiet -->
+    <div class="brush-putih"></div>
     <section class="section-whysnapdiet" id="whysnapdiet">
         <div class="whysnapdiet-title">
             <h1 class="why-content-title">Why Snap</h1>
@@ -169,6 +178,7 @@
     <!-- End Section Why Snapdiet -->
 
     <!-- Section Our Feature -->
+    <div class="brush-oren"></div>
     <section class="section-feature" id="feature">
         <div class="feature-title">
             <div class="border-white"></div>
@@ -223,6 +233,7 @@
     <!-- End Section Our Feature -->
 
     <!-- Section How it Works -->
+    <div class="brush-putih"></div>
     <section class="section-howit-works" id="howitworks">
         <div class="howit-title">
             <h1 class="howit-content-title">How it <h1 class="content-title-green1 padding-left-work"> Work?</h1>
@@ -278,6 +289,7 @@
     <!-- End Section How it works -->
 
     <!-- Section Review-->
+    <div class="brush-oren"></div>
     <section class="section-reviews" id="reviews">
         <div class="reviews-title">
             <div class="border-white"></div>
@@ -289,27 +301,31 @@
             <div class="row padding">
                 <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
                     <div class="review-content">
-                        <h5>Highly recommended!</h5>
-                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
-                        <p class="review-name">- Siapa ya -</p>
+                        <h5>Great app!</h5>
+                        <p>This application can detect food calories directly.</p>
+                        <p class="review-name">- Salsabila Haurameuthia, Mahasiswa -</p>
                         <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     </div>
                 </div>
                 <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
                     <div class="review-content">
-                        <h5>Finally! Great app!</h5>
-                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
-                        <p class="review-name">- Siapa ya -</p>
+                        <h5>Overall, the app is good</h5>
+                        <p>Please improve the UI side because it's still too simple. Add a list of objects before adding
+                            them to the database.</p>
+                        <p class="review-name">- Aldy Yoga, UXID Jakarta -</p>
                         <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     </div>
                 </div>
                 <div class="col-md-4 review-wrapper wow flipInY slower" data-wow-delay="0.5s">
                     <div class="review-content">
-                        <h5>Highly recommended!</h5>
-                        <p>Super easy to naviagte and it motivates me a lot - THANK YOU!</p>
-                        <p class="review-name">- Siapa ya -</p>
+                        <h5>That's awesome!</h5>
+                        <p>I like the technology and recommendations of this app. I think the UX side
+                            should be repaired such as automatic refreshing the data in home page. Please try to
+                            implement the AI ​​in recommendations. Good job!
+                        </p>
+                        <p class="review-name">- Harun, Mahasiswa -</p>
                         <p><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <i class="fas fa-star"></i><i class="fas fa-star"></i></p>
                     </div>
@@ -320,6 +336,7 @@
     <!-- End Section Review- -->
 
     <!-- Section GetApp -->
+    <div class="brush-putih"></div>
     <section class="section section-get-apps" id="getapps">
         <div class="container-fluid">
             <div class="row padding ">
@@ -337,7 +354,8 @@
                         <p> Get the app today and achieve your diet goals.</p>
                     </div>
                     <div class="wow fadeInUpBig slower" data-wow-delay="0.7s">
-                        <button class="btn-get-apps">Download For Free</button>
+                        <button class="btn-get-apps"> <a href="/snapdiet-v1.0.1.apk" class="btn-download"
+                                download="snapdiet.apk">Download For Free</a></button>
                     </div>
                 </div>
             </div>
@@ -364,10 +382,6 @@
 
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <!-- <script>
-        AOS.init();
-    </script> -->
     <script src="js/wow.min.js"></script>
     <script>
         new WOW().init();

@@ -14,29 +14,37 @@ window.onscroll = function () {
         myNavbar.classList.remove("active");
     }
 
-    if (document.body.width > 350) {
+    if (document.body.width >= 350) {
         myLogo.style.width = "40%";
-        toggler.style.top = ".8rem";
+        toggler.style.top = ".2rem";
     }
 };
 
-// Active Navbar on Click
-// $(document).ready(function () {
-//         $('.nav-item').on('click', function () {
-//                 $('.active-link').removeClass('active-link');
-//                 $(this).addClass('active-link');
-//             }
 
-//         );
+// Animate X
+var button = document.getElementById('nav-toggler'),
+    span = button.getElementsByTagName('span')[0];
 
-//         $('.logo-link').on('click', function () {
-//                 $('.active-link').removeClass('active-link');
-//             }
+button.onclick = function () {
+    span.classList.toggle('snapdiet-button-close');
+};
 
-//         );
-//     }
+$('#nav-toggler').on('click', toggleOnClass);
 
-// );
+function toggleOnClass(event) {
+    var toggleElementId = '#' + $(this).data('toggle'),
+        element = $(toggleElementId);
+
+    element.toggleClass('on');
+
+
+}
+
+// Close toogle when click link
+$('.navbar-nav li a').on("click", function () {
+    $('.navbar-toggler').click();
+});
+
 
 // Smoothly Scroll
 $('.nav-link').click(function (e) {
@@ -49,64 +57,6 @@ $('.nav-link').click(function (e) {
         }, 800);
     }
 });
-
-// Active Navbar on Scrolling
-//Default active on home
-// $('#about').waypoint(function () {
-
-//     $(".navbar-collapse ul li").children().removeClass("active-scroll");
-//     $("#about-link").addClass("active-scroll");
-
-// }, {
-//     offset: 101
-// });
-
-// $('#whysnapdiet').waypoint(function () {
-
-//     $(".navbar-collapse ul li").children().removeClass("active-scroll");
-//     $("#why-link").addClass("active-scroll");
-
-// }, {
-//     offset: 101
-// });
-
-// $('#feature').waypoint(function () {
-
-//     $(".navbar-collapse ul li").children().removeClass("active-scroll");
-//     $("#feature-link").addClass("active-scroll");
-
-// }, {
-//     offset: 101
-// });
-
-// $('#reviews').waypoint(function () {
-
-//     $(".navbar-collapse ul li").children().removeClass("active-scroll");
-//     $("#review-link").addClass("active-scroll");
-
-// }, {
-//     offset: 101
-// });
-
-// $('#home').waypoint(function () {
-//     $(".navbar-collapse ul li").children().removeClass("active-scroll");
-//     // $("#home-link").addClass("active-scroll");
-// }, {
-//     offset: 101
-// });
-
-// $('#about').waypoint(function () {
-//     $(".to-top").addClass("visible");
-// }, {
-//     offset: 100
-// });
-
-// $('#home').waypoint(function (event, direction) {
-//     $(".to-top").removeClass("visible");
-// }, {
-//     offset: 30
-// });
-
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 550) {
